@@ -1,0 +1,19 @@
+package com.stx.exercise.p5;
+
+public class Five_YangXin {
+
+	public static void printString() {
+		String string = "疫情之下：有这样一个地方；有一群人，非故非亲；未曾犹豫，无需理由；不顾安危，挽救生命；血肉之身，分秒必争；召之必来，来之能战；不惧逆行，甘心奉献；在这不见敌人的战场；用生命精心守护生命；凝聚中华民族的脊梁";
+		
+		String newString = string.replace('：', '\n').replace('；', '\n');
+		
+		System.out.println(newString);
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		printString();
+	}
+
+}

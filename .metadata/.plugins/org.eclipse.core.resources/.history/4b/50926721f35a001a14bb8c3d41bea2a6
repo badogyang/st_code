@@ -1,0 +1,30 @@
+package com.stx.exercise.p4;
+
+public class Five_YangXin {
+
+	public static int getTodalDay(int year, int mouth, int day) {
+		int[] ping = {31,28,31,30,31,30,31,31,30,31,30,31};
+		int[] run = {31,29,31,30,31,30,31,31,30,31,30,31};
+		
+		int ret = 0;
+		
+		if(year%400 == 0 || (year%4==0 && year%100!=0)) {
+			for(int i = 0; i < mouth-1; i++ ) {
+				ret += run[i];
+			}
+		}
+		else {
+			for(int i = 0; i < mouth-1; i++ ) {
+				ret += ping[i];
+			}
+		}
+		
+		return ret + day;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(getTodalDay(2020,2,10));
+	}
+
+}
